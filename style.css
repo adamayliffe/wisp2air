@@ -37,11 +37,12 @@ header .logo {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: block; /* Changed from flex to block */
 }
 
 .nav-menu ul li {
-    margin: 0 15px;
+    margin: 10px 0; /* Add spacing between menu items */
+    text-align: center; /* Center-align menu items */
 }
 
 .nav-menu ul li a {
