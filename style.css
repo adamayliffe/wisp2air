@@ -60,7 +60,7 @@ header .logo {
     .nav-menu {
         display: none;
         flex-wrap: wrap;
-        justify-content: flex-end; /* Align menu items to the right */
+        justify-content: flex-end;
         background-color: #b90000;
         position: absolute;
         top: 50px;
@@ -69,13 +69,13 @@ header .logo {
     }
 
     .nav-menu ul li {
-        margin: 10px 0; /* Space between rows */
-        width: 50%; /* Two buttons per row */
+        margin: 10px 0;
+        width: 50%;
     }
 
     .nav-menu ul li a {
         display: block;
-        text-align: right; /* Align text to the right */
+        text-align: right;
         padding: 5px 10px;
     }
 
@@ -100,26 +100,26 @@ footer {
     color: white;
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
     font-size: 14px;
+    align-items: center;
 }
 
 .footer-links {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
 .footer-links div {
-    flex: 1;
-    padding: 0 10px;
+    width: 30%;
+    text-align: center;
 }
 
 .footer-links h3 {
     margin-bottom: 10px;
-    font-size: 16px;
 }
 
 .footer-links ul {
@@ -134,4 +134,12 @@ footer {
 .footer-links ul li a {
     color: white;
     text-decoration: none;
+}
+
+footer hr {
+    border: 0;
+    height: 1px;
+    background-color: #888;
+    margin: 20px auto;
+    width: 80%;
 }
