@@ -3,22 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WISP2AIR</title>
-    <link rel="stylesheet" href="style.css">
-        <script>
-        document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
-
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
-});
-</script>
+    <title>BBC Clone</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">WISP2AIR</div>
+        <div class="logo">BBC</div>
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
         <nav class="nav-menu">
             <ul>
@@ -32,7 +22,7 @@
     </header>
     <main>
         <section class="hero">
-            <h1>Welcome to the BBC</h1>
+            <h1>Welcome to BBC</h1>
             <p>Your trusted source for news, sport, weather, and entertainment.</p>
         </section>
     </main>
@@ -46,6 +36,7 @@
                     <li><a href="#">Politics</a></li>
                 </ul>
             </div>
+            <hr />
             <div>
                 <h3>Sport</h3>
                 <ul>
@@ -54,6 +45,7 @@
                     <li><a href="#">Cricket</a></li>
                 </ul>
             </div>
+            <hr />
             <div>
                 <h3>Entertainment</h3>
                 <ul>
@@ -65,5 +57,6 @@
         </div>
         <p>&copy; 2025 WISP2AIR. All content of this website is owned by WISP2AIR</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
