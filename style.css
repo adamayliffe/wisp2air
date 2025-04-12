@@ -38,7 +38,7 @@ header .logo {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: nowrap; /* Default menu in one line */
+    flex-wrap: nowrap;
 }
 
 .nav-menu ul li {
@@ -59,22 +59,22 @@ header .logo {
 
     .nav-menu {
         display: none;
-        flex-direction: column; /* Make menu vertical */
+        flex-wrap: wrap;
+        justify-content: flex-end; /* Align menu items to the right */
         background-color: #b90000;
         position: absolute;
         top: 50px;
         right: 0;
         width: 100%;
-        align-items: flex-end; /* Align menu items to the right */
     }
 
     .nav-menu ul li {
-        margin: 10px 0; /* Add space between lines */
-        width: auto;
+        margin: 10px 0; /* Space between rows */
+        width: 50%; /* Two buttons per row */
     }
 
     .nav-menu ul li a {
-        display: block; /* Ensure the links take up their own line */
+        display: block;
         text-align: right; /* Align text to the right */
         padding: 5px 10px;
     }
@@ -96,9 +96,42 @@ header .logo {
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
     background-color: #333;
     color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-links div {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.footer-links h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
 }
