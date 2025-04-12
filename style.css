@@ -37,18 +37,45 @@ header .logo {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: block; /* Changed from flex to block */
+    display: flex;
+    flex-wrap: nowrap; /* Default menu in one line */
 }
 
 .nav-menu ul li {
-    margin: 10px 0; /* Add spacing between menu items */
-    text-align: center; /* Center-align menu items */
+    margin: 0 15px;
 }
 
 .nav-menu ul li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-wrap: wrap; /* Menu wraps in two columns on mobile */
+        background-color: #b90000;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-menu ul li {
+        margin: 10px auto;
+        text-align: center;
+        width: 50%; /* Two buttons per row */
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
 }
 
 .hero {
@@ -68,30 +95,4 @@ footer {
     background-color: #333;
     color: white;
     font-size: 14px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #b90000;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 100%;
-    }
-
-    .nav-menu ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
 }
