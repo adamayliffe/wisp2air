@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBC Clone</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>WISP2AIR</title>
+    <link rel="stylesheet" href="style.css">
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+});
+</script>
 </head>
 <body>
     <header>
-        <div class="logo">BBC</div>
+        <div class="logo">WISP2AIR</div>
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
         <nav class="nav-menu">
             <ul>
@@ -57,6 +67,5 @@
         </div>
         <p>&copy; 2025 WISP2AIR. All content of this website is owned by WISP2AIR</p>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 </html>
