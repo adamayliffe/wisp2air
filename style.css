@@ -99,27 +99,24 @@ footer {
     background-color: #333;
     color: white;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
     font-size: 14px;
-    align-items: center;
+    text-align: center;
 }
 
 .footer-links {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
     margin-bottom: 20px;
 }
 
 .footer-links div {
-    width: 30%;
-    text-align: center;
+    margin-bottom: 20px; /* Add spacing between sections */
 }
 
 .footer-links h3 {
     margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .footer-links ul {
@@ -128,13 +125,20 @@ footer {
 }
 
 .footer-links ul li {
-    margin: 5px 0;
+    margin: 5px 0; /* Add spacing between links */
 }
 
 .footer-links ul li a {
     color: white;
     text-decoration: none;
 }
+
+footer p {
+    margin-top: 20px;
+    border-top: 1px solid #888; /* Add a top border above the copyright */
+    padding-top: 10px;
+}
+
 
 footer hr {
     border: 0;
