@@ -59,18 +59,24 @@ header .logo {
 
     .nav-menu {
         display: none;
-        flex-wrap: wrap; /* Menu wraps in two columns on mobile */
+        flex-direction: column; /* Make menu vertical */
         background-color: #b90000;
         position: absolute;
         top: 50px;
         right: 0;
         width: 100%;
+        align-items: flex-end; /* Align menu items to the right */
     }
 
     .nav-menu ul li {
-        margin: 10px auto;
-        text-align: center;
-        width: 50%; /* Two buttons per row */
+        margin: 10px 0; /* Add space between lines */
+        width: auto;
+    }
+
+    .nav-menu ul li a {
+        display: block; /* Ensure the links take up their own line */
+        text-align: right; /* Align text to the right */
+        padding: 5px 10px;
     }
 
     .nav-menu.active {
