@@ -40,21 +40,29 @@
       cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-      .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #d32f2f;
-      }
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .menu {
+    display: flex; /* Change from "none" to "flex" */
+    justify-content: space-around; /* Space out menu items evenly */
+    align-items: center; /* Center items vertically */
+    background-color: #d32f2f; /* Red background for the menu */
+  }
 
-      .menu.active {
-        display: flex;
-      }
+  .menu.active {
+    display: flex; /* Ensure it's visible when active */
+  }
 
-      .menu-toggle {
-        display: block;
-      }
-    }
+  .menu a {
+    margin: 0; /* Remove vertical margins */
+    text-align: center; /* Center align the text */
+  }
+
+  .menu-toggle {
+    display: block; /* Keep the toggle button for smaller screens */
+  }
+}
+
 
     /* Footer styling */
     footer {
