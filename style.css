@@ -43,7 +43,7 @@ header .logo {
 }
 
 .nav-menu ul li {
-    margin: 0 20px; /* Increase margin to add more space between items */
+    margin: 0 15px;
 }
 
 .nav-menu ul li a {
@@ -51,7 +51,6 @@ header .logo {
     text-decoration: none;
     font-size: 16px;
 }
-
 
 /* Search Styles */
 .search-container {
@@ -90,7 +89,6 @@ header .logo {
     display: block;
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -108,21 +106,19 @@ header .logo {
     }
 
     .nav-menu ul li {
-        margin: 10px 0; /* Add vertical spacing between items */
-        width: 100%;    /* Ensure each item takes up full width for proper alignment */
+        margin: 10px 0;
+        width: 50%;
     }
 
     .nav-menu ul li a {
-        text-align: right; /* Align text to the right */
-        padding: 5px 10px; /* Add padding for spacing around text */
+        text-align: center;
+        display: block;
     }
 
     .nav-menu.active {
         display: flex;
-        flex-direction: column; /* Stack items vertically */
     }
 }
-
 
 .hero {
     text-align: center;
