@@ -90,32 +90,6 @@ header .logo {
     display: block;
 }
 
-/* Search Results Styling */
-#search-result-links {
-    list-style: none;
-    padding: 0;
-    display: none; /* Hide by default */
-}
-
-#search-result-links li {
-    margin: 5px 0;
-}
-
-#search-result-links li a {
-    color: blue;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-#search-result-links li a:hover {
-    text-decoration: underline;
-}
-
-/* Show search results dynamically */
-.show-results #search-result-links {
-    display: block; /* Show when results are populated */
-}
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
