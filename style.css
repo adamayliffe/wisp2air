@@ -1,46 +1,82 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Header Menu */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+  background: #333;
+  color: white;
+  padding: 1em 0;
 }
 
 .menu {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
 }
 
-.menu a {
-    text-decoration: none;
-    color: #fff;
+.menu li {
+  margin: 0 10px;
+  cursor: pointer;
 }
 
-.search-bar {
-    margin-top: 10px;
-    text-align: center;
+/* Welcome Section */
+.welcome {
+  text-align: center;
+  padding: 2em;
 }
 
+input[type="search"] {
+  width: 80%;
+  padding: 0.5em;
+  margin-top: 1em;
+}
+
+/* Footer */
 footer {
-    background-color: #f1f1f1;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-around;
+  background: #222;
+  color: white;
+  padding: 1.5em;
 }
 
-.footer-column ul {
-    list-style: none;
-    padding: 0;
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
 }
 
-.footer-column a {
-    text-decoration: none;
-    color: #333;
+.footer-columns div h4 {
+  margin-bottom: 0.5em;
+}
+
+.footer-columns ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-columns ul li {
+  margin: 0.2em 0;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+  }
 }
