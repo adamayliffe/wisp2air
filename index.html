@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="style.css">
             <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
-
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
-
     const searchInput = document.getElementById("search-input");
-    const searchItems = document.querySelectorAll(".search-item");
+    const searchResults = document.getElementById("search-result-links");
+    const resultLinks = searchResults.querySelectorAll("li");
 
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.toLowerCase();
-        searchItems.forEach(item => {
-            if (item.textContent.toLowerCase().includes(query)) {
-                item.classList.add("show");
+        let hasResults = false;
+
+        resultLinks.forEach(link => {
+            const text = link.textContent.toLowerCase();
+            if (text.includes(query)) {
+                link.style.display = "block";
+                hasResults = true;
             } else {
-                item.classList.remove("show");
+                link.style.display = "none";
             }
         });
+
+        searchResults.parentElement.classList.toggle("show-results", hasResults);
     });
 });
 
