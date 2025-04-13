@@ -1,82 +1,82 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    /* General styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-/* Header Menu */
-header {
-  background: #333;
-  color: white;
-  padding: 1em 0;
-}
+    /* Header styling */
+    header {
+      background-color: #d32f2f; /* Red background */
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.menu {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  padding: 0;
-}
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-.menu li {
-  margin: 0 10px;
-  cursor: pointer;
-}
+    .menu {
+      display: flex;
+      gap: 15px;
+    }
 
-/* Welcome Section */
-.welcome {
-  text-align: center;
-  padding: 2em;
-}
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
 
-input[type="search"] {
-  width: 80%;
-  padding: 0.5em;
-  margin-top: 1em;
-}
+    /* Hamburger menu */
+    .menu-toggle {
+      display: none;
+      font-size: 20px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
 
-/* Footer */
-footer {
-  background: #222;
-  color: white;
-  padding: 1.5em;
-}
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #d32f2f;
+      }
 
-.footer-columns {
-  display: flex;
-  justify-content: space-around;
-  text-align: left;
-}
+      .menu.active {
+        display: flex;
+      }
 
-.footer-columns div h4 {
-  margin-bottom: 0.5em;
-}
+      .menu-toggle {
+        display: block;
+      }
+    }
 
-.footer-columns ul {
-  list-style: none;
-  padding: 0;
-}
+    /* Footer styling */
+    footer {
+      background-color: #d32f2f; /* Red background */
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
 
-.footer-columns ul li {
-  margin: 0.2em 0;
-}
+    .footer-column {
+      flex: 1;
+    }
 
-footer p {
-  text-align: center;
-  margin-top: 1em;
-}
+    .footer-column a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .menu {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-columns {
-    flex-direction: column;
-    text-align: center;
-  }
-}
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
