@@ -38,10 +38,11 @@
       cursor: pointer;
     }
 
-    /* Navigation menu styling */
+    /* Navigation menu styling for desktop */
     nav.menu {
-      display: flex; /* Default inline menu for larger screens */
+      display: flex; /* Inline menu for larger screens */
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav.menu a {
@@ -54,22 +55,23 @@
     /* Mobile-specific styles */
     @media (max-width: 768px) {
       .menu {
-        display: none; /* Initially hide the menu */
-        flex-direction: column; /* Stack menu items vertically */
-        background-color: #d32f2f; /* Red background for mobile menu */
+        display: none; /* Hide menu initially on mobile */
+        flex-direction: row; /* Arrange menu items in a row */
+        justify-content: center;
+        background-color: #d32f2f;
         padding: 10px 0;
       }
 
       .menu.active {
-        display: flex; /* Show the menu when active */
+        display: flex; /* Show menu when active */
       }
 
       .menu-toggle {
-        display: block; /* Show the hamburger button */
+        display: block; /* Show the menu toggle button on mobile */
       }
 
       nav.menu a {
-        margin: 5px 0; /* Add spacing between items */
+        margin: 0 10px; /* Adjust spacing for mobile menu */
         text-align: center;
       }
     }
@@ -141,7 +143,7 @@
   <script>
     function toggleMenu() {
       const menu = document.getElementById('menu');
-      menu.classList.toggle('active'); // Toggle the menu's visibility
+      menu.classList.toggle('active'); // Toggles visibility of the mobile menu
     }
   </script>
 </body>
