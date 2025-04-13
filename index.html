@@ -4,7 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WISP2AIR Clone</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+
+    const searchInput = document.getElementById("search-input");
+    const searchItems = document.querySelectorAll(".search-item");
+
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        searchItems.forEach(item => {
+            if (item.textContent.toLowerCase().includes(query)) {
+                item.classList.add("show");
+            } else {
+                item.classList.remove("show");
+            }
+        });
+    });
+});
+</script>
 </head>
 <body>
     <header>
@@ -67,6 +91,5 @@
         </div>
         <p>&copy; 2025 WISP2AIR. All content of this website is owned by WISP2AIR</p>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 </html>
