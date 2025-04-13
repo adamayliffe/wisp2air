@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WISP2AIR</title>
+    <title>WISP2AIR Clone</title>
     <link rel="stylesheet" href="style.css">
-        <script>
-        document.addEventListener("DOMContentLoaded", () => {
+            <script>
+document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const navMenu = document.querySelector(".nav-menu");
 
     menuToggle.addEventListener("click", () => {
         navMenu.classList.toggle("active");
     });
+
+    const searchInput = document.getElementById("search-input");
+    const searchItems = document.querySelectorAll(".search-item");
+
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        searchItems.forEach(item => {
+            if (item.textContent.toLowerCase().includes(query)) {
+                item.classList.add("show");
+            } else {
+                item.classList.remove("show");
+            }
+        });
+    });
 });
-</script>
+
+            </script>
 </head>
 <body>
     <header>
-        <div class="logo">WISP2AIR</div>
+        <div class="logo">BBC</div>
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
         <nav class="nav-menu">
             <ul>
@@ -29,43 +44,53 @@
                 <li><a href="#">iLEARN</a></li>
             </ul>
         </nav>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button class="search-btn" aria-label="Search">
+                <img src="search-icon.png" alt="Search" />
+            </button>
+        </div>
     </header>
     <main>
         <section class="hero">
-            <p> <b>Welcome to WISP2AIR</b> <br>
-            your No.1 IT provider <br>
-            <b>Secure. Scalable. Superior. Your IT Evolution Starts Here!</b></p>
+            <h1>Welcome to WISP2AIR</h1>
+            <p>Your No.1 IT provider</p>
+            <p>Secure. Scalable. Superior. Your IT Evolution Starts Here!</p>
+        </section>
+        <section id="search-results">
+            <p class="search-item">Home Page Content</p>
+            <p class="search-item">Latest News</p>
+            <p class="search-item">vPLAYER Videos</p>
+            <p class="search-item">Support Portal</p>
+            <p class="search-item">iLEARN Resources</p>
         </section>
     </main>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-left">
-            <h3>News</h3>
-            <ul>
-                <li><a href="#">World</a></li>
-                <li><a href="#">UK</a></li>
-                <li><a href="#">Company</a></li>
-            </ul>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>News</h3>
+                <ul>
+                    <li><a href="#">World</a></li>
+                    <li><a href="#">UK</a></li>
+                    <li><a href="#">Company</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Other</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Entertainment</h3>
+                <ul>
+                    <li><a href="#">vPLAYER</a></li>
+                    <li><a href="#">iLEARN</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-middle">
-            <h3>Other</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Support</a></li>
-            </ul>
-        </div>
-        <div class="footer-right">
-            <h3>Entertainment</h3>
-            <ul>
-                <li><a href="#">iLEARN</a></li>
-                <li><a href="#">vPLAYER</a></li>
-            </ul>
-        </div>
-    </div>
-    <p>&copy; 2025 WISP2AIR. All content of this website is owned by WISP2AIR</p>
-</footer>
-
-
+        <p>&copy; 2025 WISP2AIR. All content of this website is owned by WISP2AIR</p>
+    </footer>
 </body>
 </html>
