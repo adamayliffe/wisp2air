@@ -32,64 +32,71 @@ document.addEventListener("DOMContentLoaded", () => {
             </script>
 </head>
 <body>
-    <header>
-        <div class="logo">WISP2AIR</div>
-        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-        <nav class="nav-menu">
+<header>
+    <div class="logo">BBC</div>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">vPLAYER</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">iLEARN</a></li>
+        </ul>
+    </nav>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search..." />
+        <button class="search-btn" aria-label="Search">
+            <img src="search-icon.png" alt="Search" />
+        </button>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <h1>Welcome to WISP2AIR</h1>
+        <p>Your No.1 IT provider</p>
+        <p>Secure. Scalable. Superior. Your IT Evolution Starts Here!</p>
+    </section>
+    <section id="search-results">
+        <ul id="search-result-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">UK</a></li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">vPLAYER</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">iLEARN</a></li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>News</h3>
             <ul>
-                <li><a href="#">Home</a></li><br>
-                <li><a href="#">News</a></li><br>
-                <li><a href="#">vPLAYER</a></li><br>
-                <li><a href="#">Support</a></li><br>
-                <li><a href="#">iLEARN</a></li><br>
+                <li><a href="#">World</a></li>
+                <li><a href="#">UK</a></li>
+                <li><a href="#">Company</a></li>
             </ul>
-        </nav>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search..." />
-            <button class="search-btn" aria-label="Search">
-            </button>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <p><b>Welcome to WISP2AIR</b><br>
-            Your No.1 IT provider<br>
-            <b>Secure. Scalable. Superior. Your IT Evolution Starts Here!</b></p>
-        </section>
-        <section id="search-results">
-            <p class="search-item">Home Page Content</p>
-            <p class="search-item">Latest News</p>
-            <p class="search-item">vPLAYER Videos</p>
-            <p class="search-item">Support Portal</p>
-            <p class="search-item">iLEARN Resources</p>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>News</h3>
-                <ul>
-                    <li><a href="#">World</a></li>
-                    <li><a href="#">UK</a></li>
-                    <li><a href="#">Company</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Other</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Entertainment</h3>
-                <ul>
-                    <li><a href="#">vPLAYER</a></li>
-                    <li><a href="#">iLEARN</a></li>
-                </ul>
-            </div>
+        <div class="footer-column">
+            <h3>Other</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
         </div>
-        <p>&copy; 2025 WISP2AIR. All content of this website is owned by WISP2AIR</p>
-    </footer>
+        <div class="footer-column">
+            <h3>Entertainment</h3>
+            <ul>
+                <li><a href="#">vPLAYER</a></li>
+                <li><a href="#">iLEARN</a></li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy; 2025 WISP2AIR. All content of this website is owned by WISP2AIR</p>
+</footer>
+
 </body>
 </html>
