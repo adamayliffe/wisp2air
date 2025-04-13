@@ -107,19 +107,21 @@ header .logo {
     }
 
     .nav-menu ul li {
-        margin: 10px 0;
-        width: 50%;
+        margin: 10px 0; /* Add vertical spacing between items */
+        width: 100%;    /* Ensure each item takes up full width for proper alignment */
     }
 
     .nav-menu ul li a {
-        text-align: center;
-        display: block;
+        text-align: right; /* Align text to the right */
+        padding: 5px 10px; /* Add padding for spacing around text */
     }
 
     .nav-menu.active {
         display: flex;
+        flex-direction: column; /* Stack items vertically */
     }
 }
+
 
 .hero {
     text-align: center;
