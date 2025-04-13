@@ -4,73 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WISP2AIR</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-document.getElementById("search").addEventListener("input", function () {
-  const query = this.value.toLowerCase();
-  const resultsContainer = document.getElementById("search-results");
-
-  // Example search results logic
-  const data = ["Home", "News", "vPLAYER", "Support", "iLEARN"];
-  const results = data.filter(item => item.toLowerCase().includes(query));
-
-  resultsContainer.innerHTML = results
-    .map(result => `<p>${result}</p>`)
-    .join("");
-});
-
-</script>
+  <style s></style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul class="menu">
-        <li>Home</li>
-        <li>News</li>
-        <li>vPLAYER</li>
-        <li>Support</li>
-        <li>iLEARN</li>
-      </ul>
+    <div class="logo">WISP2AIR</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="menu" id="menu">
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">Support</a>
+      <a href="#">vPLAYER</a>
+      <a href="#">iLEARN</a>
     </nav>
   </header>
 
-  <main>
-    <section class="welcome">
-      <h1>Welcome to WISP2AIR</h1>
-      <p>Your No.1 IT provider</p>
-      <p><strong>Secure. Scalable. Superior.</strong></p>
-      <p>Your IT Evolution Starts Here!</p>
-      <input type="search" id="search" placeholder="Search...">
-      <div id="search-results"></div>
-    </section>
-  </main>
-
   <footer>
-    <div class="footer-columns">
-      <div>
-        <h4>News</h4>
-        <ul>
-          <li>World</li>
-          <li>UK</li>
-          <li>Company</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Other</h4>
-        <ul>
-          <li>Home</li>
-          <li>Support</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Entertainment</h4>
-        <ul>
-          <li>vPLAYER</li>
-          <li>iLEARN</li>
-        </ul>
-      </div>
+    <div class="footer-column">
+      <h3>News</h3>
+      <a href="#">World</a>
+      <a href="#">UK</a>
+      <a href="#">Company</a>
     </div>
-    <p>© 2025 WISP2AIR. All content of this website is owned by WISP2AIR.</p>
+    <div class="footer-column">
+      <h3>Other</h3>
+      <a href="#">Home</a>
+      <a href="#">Support</a>
+    </div>
+    <div class="footer-column">
+      <h3>Entertainment</h3>
+      <a href="#">iLEARN</a>
+      <a href="#">vPLAYER</a>
+    </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
