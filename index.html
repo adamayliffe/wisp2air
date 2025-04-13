@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WISP2AIR</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script>
+document.getElementById('search-button').addEventListener('click', function () {
+    const query = document.getElementById('search-input').value;
+    const resultsContainer = document.getElementById('search-results');
+
+    resultsContainer.innerHTML = `Search results for "${query}"...`;
+});
+
+    </script>
 </head>
 <body>
     <header>
