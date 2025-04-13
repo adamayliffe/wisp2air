@@ -40,15 +40,8 @@
 
     /* Navigation menu styling */
     nav.menu {
-      display: none;
-      flex-direction: row;
+      display: flex; /* Default inline menu for larger screens */
       justify-content: center;
-      background-color: #d32f2f; /* Red background for the menu */
-      padding: 10px 0;
-    }
-
-    nav.menu.active {
-      display: flex; /* Show the menu when active */
     }
 
     nav.menu a {
@@ -60,8 +53,24 @@
 
     /* Mobile-specific styles */
     @media (max-width: 768px) {
+      .menu {
+        display: none; /* Initially hide the menu */
+        flex-direction: column; /* Stack menu items vertically */
+        background-color: #d32f2f; /* Red background for mobile menu */
+        padding: 10px 0;
+      }
+
+      .menu.active {
+        display: flex; /* Show the menu when active */
+      }
+
       .menu-toggle {
-        display: block; /* Show the menu toggle button on smaller screens */
+        display: block; /* Show the hamburger button */
+      }
+
+      nav.menu a {
+        margin: 5px 0; /* Add spacing between items */
+        text-align: center;
       }
     }
 
