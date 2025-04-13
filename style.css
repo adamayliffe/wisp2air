@@ -40,26 +40,35 @@
       cursor: pointer;
     }
 
-/* Mobile-specific styles */
+/* General mobile menu styles */
 @media (max-width: 768px) {
   .menu {
-    display: flex; /* Change from "none" to "flex" */
-    justify-content: space-around; /* Space out menu items evenly */
-    align-items: center; /* Center items vertically */
-    background-color: #d32f2f; /* Red background for the menu */
+    display: none; /* Initially hide the menu */
+    flex-direction: row; /* Ensure items are in one line */
+    justify-content: space-around; /* Space menu items evenly */
+    background-color: #d32f2f; /* Red background for menu */
+    padding: 10px 0;
   }
 
   .menu.active {
-    display: flex; /* Ensure it's visible when active */
+    display: flex; /* Display menu when active */
   }
 
   .menu a {
-    margin: 0; /* Remove vertical margins */
-    text-align: center; /* Center align the text */
+    margin: 0;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
   }
 
   .menu-toggle {
-    display: block; /* Keep the toggle button for smaller screens */
+    display: block; /* Keep toggle button visible */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
   }
 }
 
